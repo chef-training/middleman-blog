@@ -1,0 +1,89 @@
+@import "compass/css3/border-radius";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/filter";
+@import "compass/css3/transform";
+@import "foundation_and_overrides";
+
+$bio-background-color: $primary-color;
+$bio-foreground-color: #000;
+$profile-image-size: 200px;
+$featured-content-header-font-size: 1.6em;
+$project-screenshot-left-margin: -22px;
+
+@import "theme";
+
+.profile-row {
+  @include grid-row;
+  @include panel($bio-background-color);
+}
+
+.profile {
+  img {
+    @include border-radius($profile-image-size);
+    width: $profile-image-size;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.bio {
+  @include grid-column(8);
+
+  h2, h3, p {
+    color: $bio-foreground-color;
+  }
+}
+
+.featured-element-row {
+  @include grid-row;
+  margin-bottom: 50px;
+}
+
+section.latest-from-blog, section.featured-project {
+  h2 {
+    font-size: $featured-content-header-font-size;
+  }
+
+  h3 {
+    font-size: $featured-content-header-font-size - 0.4em;
+  }
+}
+
+section.featured-project {
+  img {
+    margin-left: $project-screenshot-left-margin;
+  }
+}
+
+@media only screen {
+  .profile {
+    @include grid-row;
+    @include grid-column(12);
+  }
+
+  .bio {
+    @include grid-row;
+    @include grid-column(12);
+    padding-top: 40px;
+  }
+
+  section.latest-from-blog, section.featured-project {
+    @include grid-row;
+    @include grid-column(12);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile {
+    @include grid-column(4);
+  }
+
+  .bio {
+    @include grid-column(8);
+    padding-top: 0px;
+  }
+
+  section.latest-from-blog, section.featured-project {
+    @include grid-column(6);
+  }
+}

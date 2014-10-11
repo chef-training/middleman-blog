@@ -1,51 +1,14 @@
-# Personal Site Template
+# Blog / Personal Website
 
-This is a template for your own personal site including a portfolio, blog, and résumé. It is based on the fantastic [middleman-zurb-template](https://github.com/mattolson/middleman-zurb-template) project.
+This is a copy of the [Personal Site Template](https://github.com/techpeace/personal-site-template). This is a template for your own personal site including a portfolio, blog, and résumé. It is based on the fantastic [middleman-zurb-template](https://github.com/mattolson/middleman-zurb-template) project.
 
 ## Installation
 
-**NOTE:** The following instructions assume that you'll be using GitHub Pages personal sites as your host. You'll want to go ahead and clone down your personal site repo first, and then delete it from GitHub. Now go ahead and create a new one (username.github.io).
-
-Go ahead and grab a copy of the code for the site and install the bundle:
-
-```console
-git clone https://github.com/makersquare/personal-site-template.git username.github.io
-cd username.github.io
-bundle install
-```
-
-If you haven't already, create your personal site repo on GitHub (be sure it has the name username.github.io, where username is your GitHub username. Now run the following setup rake task:
-
-```console
-bundle exec rake setup_github_pages
-```
-
-It will ask you to paste in the git URL for your personal site repo. Personal sites use the master branch, so this rake task will rename your master branch to source. Go ahead and push up the code for your site:
-
-```console
-git push origin source
-```
-
-Now generate and deploy the site:
-
-```console
-bundle exec middleman build
-bundle exec middleman deploy
-```
-
-After a few minutes, your site should be live.
+* Clone the repo
+* Install Bundler
+* Install project dependencies
 
 ## Set-up
-
-### Running a development server
-
-To check out your edits locally, simply run a middleman development server:
-
-```console
-bundle exec middleman
-```
-
-This will start a development server visible at [localhost:4567](http://localhost:4567).
 
 ### Configuration
 
@@ -61,7 +24,7 @@ Under the "Social Network link settings" section of `config.rb`, reset the value
 
 #### Projects
 
-You can highlight your projects with the portfolio section of the site. Use the `data/projects.yaml` file as a template for listing a description of each of your projects. They will automatically 
+You can highlight your projects with the portfolio section of the site. Use the `data/projects.yaml` file as a template for listing a description of each of your projects. They will automatically
 
 ##### Taking Screenshots
 
@@ -127,5 +90,5 @@ Create a file `source/CNAME` containing your domain name:
 thatwebmuck.com
 ```
 
-Commit this file to your source branch, then build and deploy the site. Now follow [GitHub's instructions for adding a custom domain to your Pages site](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). 
+Commit this file to your source branch, then build and deploy the site. Now follow [GitHub's instructions for adding a custom domain to your Pages site](https://help.github.com/articles/setting-up-a-custom-domain-with-pages).
 
